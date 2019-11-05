@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 15:08:44 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 16:39:57 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/05 16:57:37 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,10 +33,8 @@ static char		*ft_strndup(const char *s1, size_t len)
 {
 	char	*s2;
 
-	s2 = NULL;
 	if ((s2 = (char *)ft_calloc(len + 1, sizeof(char))))
 	{
-		s2[len] = '\0';
 		while (len--)
 			s2[len] = s1[len];
 	}
@@ -88,7 +86,7 @@ char			**ft_split(const char *s, char c)
 	size_t		i;
 
 	array = NULL;
-	if (s && (nwords = count_words(s, c)))
+	if (s && c && (nwords = count_words(s, c)))
 	{
 		if ((array = (char **)ft_calloc(nwords + 1, sizeof(char *))))
 		{
