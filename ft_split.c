@@ -6,14 +6,15 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 15:08:44 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/05 16:57:37 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/07 19:39:52 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 #include <stdlib.h>
 #include <string.h>
-#include "libft.h"
 
 static void		ft_free_2d(void **array, size_t size)
 {
@@ -86,7 +87,7 @@ char			**ft_split(const char *s, char c)
 	size_t		i;
 
 	array = NULL;
-	if (s && c && (nwords = count_words(s, c)))
+	if (s && (nwords = count_words(s, c)))
 	{
 		if ((array = (char **)ft_calloc(nwords + 1, sizeof(char *))))
 		{
