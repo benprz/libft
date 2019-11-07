@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 18:43:51 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 15:05:59 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/07 19:53:59 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,5 +31,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		*dst = '\0';
 	}
-	return (i > j ? i : j);
+	return (j);
 }
