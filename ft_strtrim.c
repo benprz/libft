@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:48:16 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/05 16:48:55 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/12 18:43:04 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,14 +40,10 @@ char			*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	len;
 
-	if (s1 && set)
-	{
-		while (*s1 && check_set(set, *s1))
-			s1++;
-		len = ft_strlen(s1);
-		while (len && check_set(set, s1[len - 1]))
-			len--;
-		return (ft_strndup(s1, len));
-	}
-	return (NULL);
+	while (*s1 && check_set(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	while (len && check_set(set, s1[len - 1]))
+		len--;
+	return (ft_strndup(s1, len));
 }
