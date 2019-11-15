@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:48:16 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/12 18:43:04 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 17:10:58 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,7 +26,7 @@ static char		*ft_strndup(const char *s1, size_t len)
 	return (s2);
 }
 
-int				check_set(const char *set, char c)
+static int		check_set(const char *set, char c)
 {
 	while (*set)
 	{
