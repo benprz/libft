@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 17:35:31 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/05 16:44:50 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/15 17:06:47 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t			s2_len;
 
 	s3 = NULL;
-	if (s1 && s2)
+	if (s1 || s2)
 	{
 		s1_len = ft_strlen(s1);
 		s2_len = ft_strlen(s2);
