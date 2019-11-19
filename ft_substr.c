@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 17:06:34 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 15:31:19 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/19 18:46:32 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,12 +18,20 @@
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*s2;
+	size_t	slen;
+	size_t	i;
 
-	if ((s2 = (char *)ft_calloc(len + 1, sizeof(char))) && start < ft_strlen(s))
+	if ((slen = ft_strlen(s)) < len)
+		len = slen - start;
+	if ((s2 = (char *)ft_calloc(len + 1, sizeof(char))) && start < slen)
 	{
 		s += start;
-		while (len-- && s[len])
-			s2[len] = s[len];
+		i = 0;
+		while (s[i] && len--)
+		{
+			s2[i] = s[i];
+			i++;
+		}
 	}
 	return (s2);
 }
