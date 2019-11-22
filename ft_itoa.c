@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_itoa.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 19:28:42 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 19:37:34 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/22 20:32:43 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,7 +23,7 @@ static short	count_chars(int n)
 	return (len);
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa(const int n)
 {
 	char			*str;
 	unsigned int	n2;
