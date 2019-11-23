@@ -6,12 +6,12 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 17:43:14 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/22 20:31:20 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 16:46:34 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+int		ft_isprint(const int c)
 {
 	return (c >= 32 & c <= 126);
 }

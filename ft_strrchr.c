@@ -3,18 +3,17 @@
 /*                                                              /             */
 /*   ft_strrchr.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 18:09:05 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/21 14:51:32 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:08:40 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, const int c)
 {
 	int len;
 

@@ -3,22 +3,25 @@
 /*                                                              /             */
 /*   ft_strlen.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 17:15:46 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 15:07:37 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 17:55:46 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
 	size_t i;
 
 	i = 0;
-	while (*(s++))
-		i++;
+	if (s)
+	{
+		while (*(s++))
+			i++;
+	}
 	return (i);
 }

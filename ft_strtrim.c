@@ -3,30 +3,17 @@
 /*                                                              /             */
 /*   ft_strtrim.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:48:16 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 17:10:58 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:11:23 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-static char		*ft_strndup(const char *s1, size_t len)
-{
-	char	*s2;
-
-	if ((s2 = (char *)ft_calloc(len + 1, sizeof(char))))
-	{
-		while (len--)
-			s2[len] = s1[len];
-	}
-	return (s2);
-}
-
-static int		check_set(const char *set, char c)
+static int		check_set(const char *set, const char c)
 {
 	while (*set)
 	{

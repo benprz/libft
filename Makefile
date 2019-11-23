@@ -3,10 +3,10 @@
 #                                                               /              #
 #    Makefile                                         .::    .:/ .      .::    #
 #                                                  +:+:+   +:    +:  +:+:+     #
-#    By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+      #
+#    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2019/10/24 17:29:00 by bperez      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/23 18:17:07 by bperez      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -21,7 +21,8 @@ FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 		ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strlcpy.c ft_strlcat.c\
 		ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c\
-		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strnstr.c
+		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strnstr.c\
+		ft_isspace.c ft_free_2d.c ft_strndup.c
 OBJ = $(FILES:c=o)
 
 .PHONY: all clean fclean re

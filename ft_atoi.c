@@ -6,14 +6,14 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 18:27:49 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/22 20:21:57 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 19:10:52 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	int val;
 	int	neg;

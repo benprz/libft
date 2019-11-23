@@ -3,20 +3,19 @@
 /*                                                              /             */
 /*   ft_memcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 14:31:21 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/05 20:26:32 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:57:11 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
-	if (dst || src)
-		while (n--)
-			*((unsigned char *)dst + n) = *((unsigned char *)src + n);
+	while (len--)
+		*((unsigned char *)dst + len) = *((unsigned char *)src + len);
 	return (dst);
 }

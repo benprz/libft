@@ -6,12 +6,12 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 17:37:11 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/22 20:31:08 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 16:46:29 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int		ft_isdigit(const int c)
 {
 	return (c >= '0' && c <= '9');
 }

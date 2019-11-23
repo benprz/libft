@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_putnbr_fd.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 16:03:09 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 16:03:11 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 16:58:08 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(const int n, const int fd)
 {
 	unsigned int	n2;
 

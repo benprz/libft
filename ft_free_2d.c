@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strlcpy.c                                     .::    .:/ .      .::   */
+/*   ft_free_2d.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/07 18:43:51 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 17:57:41 by bperez      ###    #+. /#+    ###.fr     */
+/*   Created: 2019/11/23 17:08:53 by bperez       #+#   ##    ##    #+#       */
+/*   Updated: 2019/11/23 18:27:43 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, const size_t size)
+void    ft_free_2d(void **array, size_t size)
 {
-	size_t	i;
-
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (src[i] && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (ft_strlen(src));
+    if (array)
+    {
+        while (size--)
+        {
+            if (array[size])
+                free(array[size]);
+        }
+        free(array);
+    }
 }

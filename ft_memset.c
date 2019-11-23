@@ -3,19 +3,19 @@
 /*                                                              /             */
 /*   ft_memset.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 12:26:22 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 18:37:16 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:56:02 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *ptr, const int c, size_t len)
 {
 	while (len--)
-		*((unsigned char *)b + len) = (unsigned char)c;
-	return (b);
+		*((unsigned char *)ptr + len) = (unsigned char)c;
+	return (ptr);
 }

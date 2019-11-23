@@ -3,25 +3,25 @@
 /*                                                              /             */
 /*   ft_memchr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 16:18:13 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 16:25:59 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 19:08:07 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *ptr, const int c, const size_t len)
 {
 	size_t i;
 
 	i = 0;
-	while (i != n)
+	while (i != len)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return ((void *)s + i);
+		if (((unsigned char *)ptr)[i] == (unsigned char)c)
+			return ((void *)ptr + i);
 		i++;
 	}
 	return (NULL);

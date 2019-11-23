@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_strncmp.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 18:24:42 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 14:54:39 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:06:43 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, const size_t n)
 {
 	size_t i;
 

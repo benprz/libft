@@ -3,22 +3,21 @@
 /*                                                              /             */
 /*   ft_memmove.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 15:34:13 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/23 14:42:12 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 19:02:52 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t i;
 
-	if (dst || src)
+	if (dst && src)
 	{
 		if (src < dst)
 		{

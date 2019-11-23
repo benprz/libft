@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_strchr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 17:59:28 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/07 18:11:49 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 17:31:44 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stddef.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, const int c)
 {
 	while (*s)
 	{

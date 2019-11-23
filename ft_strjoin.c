@@ -3,32 +3,35 @@
 /*                                                              /             */
 /*   ft_strjoin.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 17:35:31 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/15 17:16:15 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:23:38 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char			*s3;
-	size_t			s1_len;
-	size_t			s2_len;
+	size_t			len1;
+	size_t			len2;
 
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	if ((s3 = (char *)ft_calloc(s1_len + s2_len + 1, sizeof(char))))
+	s3 = NULL;
+	if (s1 || s2)
 	{
-		s3 += s1_len + s2_len;
-		while (s2_len--)
-			*--s3 = s2[s2_len];
-		while (s1_len--)
-			*--s3 = s1[s1_len];
+		len1 = ft_strlen(s1);
+		len2 = ft_strlen(s2);
+		if ((s3 = (char *)ft_calloc(len1 + len2 + 1, sizeof(char))))
+		{
+			s3 += len1 + len2;
+			while (len2--)
+				*--s3 = s2[len2];
+			while (len1--)
+				*--s3 = s1[len1];
+		}
 	}
 	return (s3);
 }

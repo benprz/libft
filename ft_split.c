@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_split.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 15:08:44 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/12 18:21:45 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 18:27:55 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,33 +14,6 @@
 #include "libft.h"
 
 #include <stdlib.h>
-#include <string.h>
-
-static void		ft_free_2d(void **array, size_t size)
-{
-	size_t i;
-
-	i = 0;
-	while (i != size)
-	{
-		if (array[i])
-			free(array[i]);
-		i++;
-	}
-	free(array);
-}
-
-static char		*ft_strndup(const char *s1, size_t len)
-{
-	char	*s2;
-
-	if ((s2 = (char *)ft_calloc(len + 1, sizeof(char))))
-	{
-		while (len--)
-			s2[len] = s1[len];
-	}
-	return (s2);
-}
 
 static size_t	count_words(const char *s, char c)
 {
@@ -60,7 +33,7 @@ static size_t	count_words(const char *s, char c)
 	return (nwords);
 }
 
-static char		*parse_word(const char *s, char c, size_t current_word)
+static char		*parse_word(const char *s, const char c, size_t current_word)
 {
 	size_t i;
 
@@ -80,7 +53,7 @@ static char		*parse_word(const char *s, char c, size_t current_word)
 	return (ft_strndup(s, i));
 }
 
-char			**ft_split(const char *s, char c)
+char			**ft_split(const char *s, const char c)
 {
 	char		**array;
 	size_t		nwords;

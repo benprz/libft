@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 19:20:54 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/22 20:28:45 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 16:48:16 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,11 +15,16 @@
 
 #include <stdlib.h>
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(const size_t count, const size_t size)
 {
-	void *ptr;
+	void	*ptr;
+	size_t	len;
 
-	if ((ptr = malloc(size * count)))
-		ft_bzero(ptr, size * count);
+	ptr = NULL;
+	if ((len = size * count) > 0)
+	{
+		if ((ptr = malloc(len)))
+			ft_bzero(ptr, len);
+	}
 	return (ptr);
 }
