@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 19:17:33 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 19:20:29 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *ptr, const int c, const size_t len);
 int		ft_memcmp(const void *p1, const void *p2, const size_t len);
 
-size_t	ft_strlen(const char *s);
+size_t	ft_strlen(const char *str);
 int		ft_isalpha(const int c);
 int		ft_isdigit(const int c);
 int		ft_isalnum(const int c);
