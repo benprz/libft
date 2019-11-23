@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 19:09:59 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/23 19:17:33 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -58,5 +58,6 @@ void	ft_putnbr_fd(const int n, const int fd);
 int		ft_isspace(const int c);
 void    ft_free_2d(void **array, size_t size);
 char	*ft_strndup(const char *s1, size_t len);
+size_t	ft_strclen(const char *str, const char c)
 
 #endif

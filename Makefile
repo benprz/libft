@@ -6,14 +6,14 @@
 #    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2019/11/23 18:17:07 by bperez      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/11/23 19:18:26 by bperez      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 INC = libft.h
 FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 		ft_memchr.c ft_memcmp.c ft_strlen.c ft_isalpha.c ft_isdigit.c\
@@ -22,7 +22,7 @@ FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 		ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c\
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strnstr.c\
-		ft_isspace.c ft_free_2d.c ft_strndup.c
+		ft_isspace.c ft_free_2d.c ft_strndup.c ft_strclen.c
 OBJ = $(FILES:c=o)
 
 .PHONY: all clean fclean re
@@ -30,7 +30,7 @@ OBJ = $(FILES:c=o)
 all: $(NAME)
 
 %.o: %.c $(INC)
-	$(CC) $(FLAGS) -I$(INC) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(INC) -c $< -o $@
 
 $(NAME): $(OBJ)
 	ar rus $@ $?
