@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2020/01/20 17:14:57 by bperez      ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/21 15:20:13 by bperez      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -18,11 +18,16 @@ CFLAGS = -Wall -Wextra -Werror -Wpedantic
 INC_DIR = includes/
 SRC_DIR = src/
 OBJ_DIR = .obj/
-DEBUG_DIR = .debug/
+DEBUG_DIR = 
 DEBUG_NAME = debug
+DEBUG_ARGS = main.c
+
+INC = ft_printf.h\
+	  get_next_line.h\
+	  libft.h\
 
 FT_PRINTF_DIR = ft_printf/
-SRC_FT_PRINTF =	ft_printf.c\
+FT_PRINTF_SRC =	ft_printf.c\
 				init_flags.c\
 				print_arg.c\
 				convert/char.c\
@@ -34,7 +39,7 @@ SRC_FT_PRINTF =	ft_printf.c\
 				convert/percent.c
 
 LIBC_DIR = libc/
-SRC_LIBC =	ft_abs.c\
+LIBC_SRC =	ft_abs.c\
 			ft_atoi.c\
 			ft_bzero.c\
 			ft_calloc.c\
@@ -51,6 +56,7 @@ SRC_LIBC =	ft_abs.c\
 			ft_memmove.c\
 			ft_memset.c\
 			ft_putchar.c\
+			ft_strcpy.c\
 			ft_strchr.c\
 			ft_strdup.c\
 			ft_strlcat.c\
@@ -62,7 +68,7 @@ SRC_LIBC =	ft_abs.c\
 			ft_strrchr.c\
 			ft_tolower.c\
 			ft_toupper.c\
-			$(addprefix $(FT_PRINTF_DIR),$(SRC_FT_PRINTF))
+			$(addprefix $(FT_PRINTF_DIR),$(FT_PRINTF_SRC))
 
 SRC =	ft_dtoa.c\
 		ft_free_2d.c\
@@ -79,6 +85,7 @@ SRC =	ft_dtoa.c\
 		ft_replace_string.c\
 		ft_skip_digit.c\
 		ft_split.c\
+		ft_strccpy.c\
 		ft_strclen.c\
 		ft_strjoin.c\
 		ft_strmapi.c\
@@ -86,7 +93,8 @@ SRC =	ft_dtoa.c\
 		ft_substr.c\
 		ft_tolower_string.c\
 		ft_udtoa.c\
-		$(addprefix $(LIBC_DIR),$(SRC_LIBC))
+		get_next_line.c\
+		$(addprefix $(LIBC_DIR),$(LIBC_SRC))
 
 OBJ = $(SRC:%.c=$(OBJ_DIR)%.o)
 
@@ -94,7 +102,7 @@ OBJ = $(SRC:%.c=$(OBJ_DIR)%.o)
 
 all: $(NAME)
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INC_DIR)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(addprefix $(INC_DIR),$(INC))
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
 
@@ -109,6 +117,6 @@ fclean: clean
 	/bin/rm -f $(DEBUG_DIR)$(DEBUG_NAME)
 
 debug: $(NAME)
-	gcc $(CFLAGS) -I ../$(INC_DIR) $(DEBUG_DIR)main.c -o $(DEBUG_DIR)$(DEBUG_NAME) $(NAME) && ./$(DEBUG_DIR)$(DEBUG_NAME)
+	gcc $(CFLAGS) -I ../$(INC_DIR) $(DEBUG_DIR)main.c -o $(DEBUG_DIR)$(DEBUG_NAME) $(NAME) && ./$(DEBUG_DIR)$(DEBUG_NAME) $(DEBUG_ARGS)
 
 re: fclean all

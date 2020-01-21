@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_strccpy.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/20 20:34:55 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 09:41:54 by bperez      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/21 09:36:56 by bperez       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/21 09:42:40 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
+void	*ft_strccpy(char *dst, const char *src, const char c)
 {
 	if (dst && src)
 	{
-		while (*src)
+		while (*src && *src != c)
 			*dst++ = *src++;
-		*dst = *src;
 	}
 	return (dst);
 }

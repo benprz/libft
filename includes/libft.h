@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/10 16:17:10 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/21 09:41:11 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,8 @@
 # define LIBFT_H
 
 # include "ft_printf.h"
+# include "get_next_line.h"
+
 # include <stddef.h>
 
 void	*ft_memset(void *ptr, const int c, size_t len);
@@ -47,6 +49,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strccpy(char *dst, const char *src, const char c);
 
 char	*ft_strdup(const char *s1);
 char	*ft_strndup(const char *s1, size_t len);
