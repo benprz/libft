@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2020/01/21 15:20:13 by bperez      ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/22 12:11:36 by bperez      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -77,6 +77,7 @@ SRC =	ft_dtoa.c\
 		ft_max_value.c\
 		ft_min_value.c\
 		ft_putchar_fd.c\
+		ft_putendl.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
 		ft_putnstr.c\
