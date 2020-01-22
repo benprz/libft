@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/22 12:19:30 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/22 13:43:48 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -45,6 +45,7 @@ int		ft_tolower(const int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strnrcmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
@@ -65,7 +66,7 @@ void	ft_putchar_fd(const char c, const int fd);
 int		ft_putstr(const char *s);
 int		ft_putnstr(const char *s, const int len);
 void	ft_putstr_fd(const char *s, const int fd);
-void	ft_putendl(const char *s);
+int		ft_putendl(const char *s);
 void	ft_putendl_fd(const char *s, const int fd);
 void	ft_putnbr_fd(const int n, const int fd);
 

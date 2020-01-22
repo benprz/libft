@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strncmp.c                                     .::    .:/ .      .::   */
+/*   ft_strnrcmp.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/07 18:24:42 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/22 13:27:47 by bperez      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/22 13:18:46 by bperez       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/22 13:37:00 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 #include <stddef.h>
 
-int		ft_strncmp(const char *s1, const char *s2, const size_t n)
+int		ft_strnrcmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	len1;
+	size_t	len2;
 
-	i = 0;
-	while (i != n)
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	while (n-- && len1-- && len2--)
 	{
-		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
-		i++;
-		if (!(s1[i]) || !(s2[i]))
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		if (((unsigned char *)s1)[len1] != ((unsigned char *)s2)[len2])
+			return (((unsigned char *)s1)[len1] - ((unsigned char *)s2)[len2]);
 	}
+	if (!len1 || !len2)
+		return (((unsigned char *)s1)[len1] - ((unsigned char *)s2)[len2]);
 	return (0);
 }

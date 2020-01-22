@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2020/01/22 12:11:36 by bperez      ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/22 13:46:06 by bperez      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -21,6 +21,7 @@ OBJ_DIR = .obj/
 DEBUG_DIR = 
 DEBUG_NAME = debug
 DEBUG_ARGS = main.c
+DEBUG_FLAGS = -Wall -Wextra -Wpedantic
 
 INC = ft_printf.h\
 	  get_next_line.h\
@@ -90,6 +91,7 @@ SRC =	ft_dtoa.c\
 		ft_strclen.c\
 		ft_strjoin.c\
 		ft_strmapi.c\
+		ft_strnrcmp.c\
 		ft_strtrim.c\
 		ft_substr.c\
 		ft_tolower_string.c\
@@ -118,6 +120,6 @@ fclean: clean
 	/bin/rm -f $(DEBUG_DIR)$(DEBUG_NAME)
 
 debug: $(NAME)
-	gcc $(CFLAGS) -I ../$(INC_DIR) $(DEBUG_DIR)main.c -o $(DEBUG_DIR)$(DEBUG_NAME) $(NAME) && ./$(DEBUG_DIR)$(DEBUG_NAME) $(DEBUG_ARGS)
+	gcc $(DEBUG_FLAGS) -I$(INC_DIR) $(DEBUG_DIR)main.c -o $(DEBUG_DIR)$(DEBUG_NAME) $(NAME) && ./$(DEBUG_DIR)$(DEBUG_NAME) $(DEBUG_ARGS)
 
 re: fclean all
