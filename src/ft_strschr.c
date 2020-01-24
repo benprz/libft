@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_skip_digit.c                                  .::    .:/ .      .::   */
+/*   ft_strschr.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/12/03 18:04:08 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/24 13:49:34 by bperez      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/24 17:02:33 by bperez       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/24 17:15:38 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void	ft_skip_digit(const char **format)
+char	*ft_strschr(const char *s, const char *s2)
 {
-	while (ft_isdigit(**format))
-		(*format)++;
+	int i;
+
+	while (*s)
+	{
+		i = 0;
+		while (s2[i])
+		{
+			if (s2[i] == *s)
+				return ((char *)s);
+			i++;
+		}
+		s++;
+	}
+	return (NULL);
 }
