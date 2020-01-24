@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/22 13:43:48 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/24 13:35:46 by bperez      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -42,6 +42,7 @@ size_t	ft_strclen(const char *str, const int c);
 int		ft_toupper(const int c);
 int		ft_tolower(const int c);
 
+char	*ft_strcdup(const char *s, const int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
