@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2020/01/24 19:18:44 by bperez      ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/31 16:13:01 by bperez      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -97,6 +97,7 @@ SRC =	ft_dtoa.c\
 		ft_strschr.c\
 		ft_strtrim.c\
 		ft_substr.c\
+		ft_swap.c\
 		ft_tolower_string.c\
 		ft_udtoa.c\
 		get_next_line.c\
