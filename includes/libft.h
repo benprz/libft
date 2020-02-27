@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/31 16:11:19 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/27 18:44:28 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,8 +19,9 @@
 
 # include <stddef.h>
 
-int		ft_abs(const int i);
+double	ft_abs(const double i);
 void	ft_bzero(void *ptr, const size_t len);
+void	ft_bzero_uint128(void *ptr, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_free_2d(void **array, size_t size);
 int		ft_isalnum(const int c);
@@ -35,7 +36,8 @@ void	*ft_memchr(const void *ptr, const int c, const size_t len);
 int		ft_memcmp(const void *p1, const void *p2, const size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memset(void *ptr, const int c, size_t len);
+void	*ft_memset(void *ptr, const unsigned int c, size_t len);
+void	ft_memset_uint128(void *ptr, const uint32_t c, size_t len);
 int		ft_min_value(const int n, const int min);
 size_t	ft_strlen(const char *str);
 size_t	ft_strclen(const char *str, const int c);
