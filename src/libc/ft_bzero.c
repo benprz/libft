@@ -1,19 +1,24 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   ft_bzero.c                                       .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/07 13:11:56 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 19:10:07 by bperez      ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/03/04 15:02:10 by bperez            #+#    #+#             */
+/*   Updated: 2020/03/04 15:02:40 by bperez           ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void	ft_bzero(void *ptr, const size_t n)
+void	ft_bzero(void *ptr, const size_t len)
 {
-	ft_memset(ptr, 0, n);
+	__uint128_t *ptr_128;
+	size_t		len_128;
+
+	ptr_128 = (__uint128_t *)ptr;
+	len_128 = len * 0.0625;
+	while (len_128--)
+		ptr_128[len_128] = 0;
 }

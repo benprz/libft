@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/27 18:44:28 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2020/03/04 14:11:28 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,7 +37,7 @@ int		ft_memcmp(const void *p1, const void *p2, const size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *ptr, const unsigned int c, size_t len);
-void	ft_memset_uint128(void *ptr, const uint32_t c, size_t len);
+void	ft_memset_uint32(void *ptr, const uint32_t c, size_t len);
 int		ft_min_value(const int n, const int min);
 size_t	ft_strlen(const char *str);
 size_t	ft_strclen(const char *str, const int c);
