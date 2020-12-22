@@ -40,6 +40,7 @@ void	*ft_memset(void *ptr, const unsigned int c, size_t len);
 void	ft_memset_uint32(void *ptr, const uint32_t c, size_t len);
 int		ft_min_value(const int n, const int min);
 size_t	ft_strlen(const char *str);
+size_t	ft_strlen_2d(char **array);
 size_t	ft_strclen(const char *str, const int c);
 int		ft_toupper(const int c);
 int		ft_tolower(const int c);

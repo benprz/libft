@@ -93,6 +93,7 @@ SRC =	ft_dtoa.c\
 		ft_strclen.c\
 		ft_strctrim.c\
 		ft_strjoin.c\
+		ft_strlen_2d.c\
 		ft_strmapi.c\
 		ft_strnrcmp.c\
 		ft_strschr.c\
