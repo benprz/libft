@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/03/04 14:11:28 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/01/18 15:35:26 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,6 +40,7 @@ void	*ft_memset(void *ptr, const unsigned int c, size_t len);
 void	ft_memset_uint32(void *ptr, const uint32_t c, size_t len);
 int		ft_min_value(const int n, const int min);
 size_t	ft_strlen(const char *str);
+size_t	ft_strlen_2d(char **array);
 size_t	ft_strclen(const char *str, const int c);
 int		ft_toupper(const int c);
 int		ft_tolower(const int c);
