@@ -75,3 +75,22 @@ char			**ft_split(const char *s, const char c)
 	}
 	return (array);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+{
+	char **split = ft_split(" 200, 201, 202", ',');
+	
+	if (split)
+	{
+		while (*split)
+		{
+			printf("%s\n", *split);
+			split++;
+		}
+	}
+	return 0;
+}
+*/
