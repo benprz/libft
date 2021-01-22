@@ -1,14 +1,13 @@
 # **************************************************************************** #
-#                                                           LE - /             #
-#                                                               /              #
-#    Makefile                                         .::    .:/ .      .::    #
-#                                                  +:+:+   +:    +:  +:+:+     #
-#    By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+      #
-#                                                  #+#   #+    #+    #+#       #
-#    Created: 2019/10/07 13:38:41 by bperez       #+#   ##    ##    #+#        #
-#    Updated: 2021/01/18 15:32:38 by bperez           ###   ########lyon.fr    #
-#                                                          /                   #
-#                                                         /                    #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/01/22 14:48:59 by bperez            #+#    #+#              #
+#    Updated: 2021/01/22 14:49:03 by bperez           ###   ########lyon.fr    #
+#                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
@@ -63,6 +62,7 @@ LIBC_SRC =	ft_abs.c\
 			ft_strlcat.c\
 			ft_strlcpy.c\
 			ft_strlen.c\
+			ft_strcmp.c\
 			ft_strncmp.c\
 			ft_strndup.c\
 			ft_strnstr.c\

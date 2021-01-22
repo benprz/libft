@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/01/18 15:35:26 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/01/22 14:47:45 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -51,6 +51,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strctrim(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strschr(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strnrcmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
