@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_switch.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 15:12:18 by bperez            #+#    #+#             */
-/*   Updated: 2021/01/27 15:20:44 by bperez           ###   ########lyon.fr   */
+/*   Created: 2021/01/27 17:01:35 by bperez            #+#    #+#             */
+/*   Updated: 2021/01/27 17:06:29 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_switch(void **ptr, void *ptr2)
 {
-	ft_memset(s, 0, n);
+	void *tmp;
+
+	tmp = *ptr;
+	*ptr = ptr2;
+	free(tmp);
 }

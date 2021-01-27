@@ -3,16 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 15:12:18 by bperez            #+#    #+#             */
-/*   Updated: 2021/01/27 15:20:44 by bperez           ###   ########lyon.fr   */
+/*   Created: 2020/03/04 15:02:10 by bperez            #+#    #+#             */
+/*   Updated: 2021/01/27 15:10:23 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero_128(void *ptr, const size_t len)
 {
-	ft_memset(s, 0, n);
+	__uint128_t *ptr_128;
+	size_t		len_128;
+
+	ptr_128 = (__uint128_t *)ptr;
+	len_128 = len * 0.0625;
+	while (len_128--)
+		ptr_128[len_128] = 0;
+	if (len_128)
+	{
+		len_128 /= 0.0625;
+
+	}
 }
