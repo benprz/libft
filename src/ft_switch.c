@@ -12,11 +12,11 @@
 
 #include <stdlib.h>
 
-void	ft_switch(void **ptr, void *ptr2)
+void	ft_switch(void **a, void *b)
 {
 	void *tmp;
 
-	tmp = *ptr;
-	*ptr = ptr2;
+	tmp = *a;
+	*a = b;
 	free(tmp);
 }

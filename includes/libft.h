@@ -46,6 +46,7 @@ int		ft_toupper(const int c);
 int		ft_tolower(const int c);
 
 void	ft_swap(void *a, void *b);
+void	ft_switch(void **a, void *b);
 char	*ft_strcdup(const char *s, const int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strctrim(const char *s, int c);
