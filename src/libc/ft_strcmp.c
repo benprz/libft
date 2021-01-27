@@ -20,10 +20,9 @@ int	ft_strcmp(const char *s1, const char *s2)
 	i = 0;
 	while (((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])
 	{
-		i++;
-		if (!s1[i] || !s2[i])
+		if (!s1[i + 1] || !s2[i + 1])
 			break ;
+		i++;
 	}
-	//printf("s1 = %s | s2 = %s | return = %d\n\n", s1, s2, ((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

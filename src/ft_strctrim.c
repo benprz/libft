@@ -36,20 +36,17 @@ char		*ft_strctrim(const char *s1, int c)
 	int		occurrences;
 	int		i;
 
-	s2 = NULL;
-	if ((occurrences = get_occurrences(s1, c)))
+	occurrences = get_occurrences(s1, c);
+	if ((s2 = malloc(sizeof(char) * (ft_strlen(s1) - occurrences + 1))))
 	{
-		if ((s2 = malloc(sizeof(char) * (ft_strlen(s1) - occurrences + 1))))
+		i = 0;
+		while (*s1)
 		{
-			i = 0;
-			while (*s1)
-			{
-				if (*s1 != c)
-					s2[i++] = *s1;
-				s1++;
-			}
-			s2[i] = '\0';
+			if (*s1 != c)
+				s2[i++] = *s1;
+			s1++;
 		}
+		s2[i] = '\0';
 	}
 	return (s2);
 }

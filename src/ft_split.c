@@ -76,20 +76,18 @@ char			**ft_split(const char *s, const char c)
 	return (array);
 }
 
-/*
 #include <stdio.h>
-
+/*
 int main()
 {
-	char **split = ft_split(" 200, 201, 202", ',');
+	char **split = ft_split(" 15,29,", ',');
 	
 	if (split)
 	{
-		while (*split)
-		{
-			printf("%s\n", *split);
-			split++;
-		}
+		printf("%s\n", split[0]);
+		printf("%s\n", split[1]);
+		printf("%s\n", split[2]);
+		printf("strlen %d\n", ft_strlen_2d(split));
 	}
 	return 0;
 }
