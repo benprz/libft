@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_switch.c                                        :+:      :+:    :+:   */
+/*   ft_tmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,8 @@
 
 #include <stdlib.h>
 
-void	ft_switch(void **a, void *b)
+void	*ft_tmp(void *a, void *b)
 {
-	void *tmp;
-
-	tmp = *a;
-	*a = b;
-	free(tmp);
+	free(a);
+	return (b);
 }

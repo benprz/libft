@@ -100,8 +100,8 @@ SRC =	ft_dtoa.c\
 		ft_strtrim.c\
 		ft_substr.c\
 		ft_swap.c\
-		ft_switch.c\
 		ft_tolower_string.c\
+		ft_tmp.c\
 		ft_udtoa.c\
 		get_next_line.c\
 		$(addprefix $(LIBC_DIR),$(LIBC_SRC))
