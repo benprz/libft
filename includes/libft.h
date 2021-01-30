@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/01/22 14:47:45 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/01/30 14:55:52 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -60,6 +60,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strccpy(char *dst, const char *src, const char c);
+int		ft_regex(char *str, char *regex);
+void	ft_strcreplace(char *str, char src, char dst);
 
 char	*ft_strdup(const char *s1);
 char	*ft_strndup(const char *s1, size_t len);

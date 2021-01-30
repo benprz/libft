@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_regex.c                                         :+:      :+:    :+:   */
+/*   ft_strcreplace.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/29 17:27:07 by bperez            #+#    #+#             */
-/*   Updated: 2021/01/30 15:28:48 by bperez           ###   ########lyon.fr   */
+/*   Created: 2021/01/30 14:40:20 by bperez            #+#    #+#             */
+/*   Updated: 2021/01/30 14:45:44 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		check_regex(char c, char *regex)
+void	ft_strcreplace(char *str, char src, char dst)
 {
-	while (*regex)
+	while (*str)
 	{
-		if (c == *regex)
-			return (1);
-		regex++;
+		if (*str == src)
+			*str = dst;
+		str++;
 	}
-	return (0);
-}
-
-int		ft_regex(char *str, char *regex)
-{
-	if (str && regex)
-	{
-		while (*str)
-		{
-			if (!check_regex(*str, regex))
-				return (0);
-			str++;
-		}
-	}
-	return (1);
 }

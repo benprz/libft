@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/22 14:48:59 by bperez            #+#    #+#              #
-#    Updated: 2021/01/22 14:49:03 by bperez           ###   ########lyon.fr    #
+#    Updated: 2021/01/30 14:46:32 by bperez           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,12 +85,14 @@ SRC =	ft_dtoa.c\
 		ft_putnstr.c\
 		ft_putstr.c\
 		ft_putstr_fd.c\
+		ft_regex.c\
 		ft_replace_string.c\
 		ft_skip_digit.c\
 		ft_split.c\
 		ft_strccpy.c\
 		ft_strcdup.c\
 		ft_strclen.c\
+		ft_strcreplace.c\
 		ft_strctrim.c\
 		ft_strjoin.c\
 		ft_strlen_2d.c\
