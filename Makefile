@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/22 14:48:59 by bperez            #+#    #+#              #
-#    Updated: 2021/01/30 14:46:32 by bperez           ###   ########lyon.fr    #
+#    Updated: 2021/02/02 15:47:52 by bperez           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,6 +96,7 @@ SRC =	ft_dtoa.c\
 		ft_strctrim.c\
 		ft_strjoin.c\
 		ft_strlen_2d.c\
+		ft_strlengthen.c\
 		ft_strmapi.c\
 		ft_strnrcmp.c\
 		ft_strschr.c\

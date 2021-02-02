@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/01/30 14:55:52 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 15:43:32 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -71,6 +71,7 @@ char	*ft_strtrim(const char *s1, const char *set);
 char	**ft_split(const char *s, char c);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	ft_replace_string(char **ptr, const char *str);
+char	*ft_strlengthen(char *str, size_t len, char c);
 
 int		ft_putchar(const char c);
 void	ft_putchar_fd(const char c, const int fd);
