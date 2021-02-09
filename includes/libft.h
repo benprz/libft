@@ -19,6 +19,8 @@
 
 # include <stddef.h>
 
+# define REGEX_DIGITS "0123456789"
+
 double	ft_abs(const double i);
 void	ft_bzero(void *ptr, const size_t len);
 void	ft_bzero_uint128(void *ptr, size_t len);
