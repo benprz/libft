@@ -6,12 +6,14 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/30 20:06:08 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/30 20:07:02 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:07:26 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_max_value(const int n, const int max)
+int	ft_max_value(const int n, const int max)
 {
-	return (n > max ? max : n);
+	if (n > max)
+		return (max);
+	return (n);
 }

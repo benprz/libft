@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/15 15:08:44 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/01/27 14:46:32 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 17:14:02 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,9 +33,9 @@ static size_t	count_words(const char *s, char c)
 	return (nwords);
 }
 
-static char		*parse_word(const char *s, const char c, size_t current_word)
+static char	*parse_word(const char *s, const char c, size_t current_word)
 {
-	size_t i;
+	size_t	i;
 
 	while (*s && *s == c)
 		s++;
@@ -53,19 +53,21 @@ static char		*parse_word(const char *s, const char c, size_t current_word)
 	return (ft_strndup(s, i));
 }
 
-char			**ft_split(const char *s, const char c)
+char	**ft_split(const char *s, const char c)
 {
-	char		**array;
-	size_t		nwords;
-	size_t		i;
+	char	**array;
+	size_t	nwords;
+	size_t	i;
 
 	nwords = count_words(s, c);
-	if ((array = (char **)ft_calloc(nwords + 1, sizeof(char *))))
+	array = (char **)ft_calloc(nwords + 1, sizeof(char *));
+	if (array)
 	{
 		i = 0;
 		while (i != nwords)
 		{
-			if (!(array[i] = parse_word(s, c, i)))
+			array[i] = parse_word(s, c, i);
+			if (!array[i])
 			{
 				ft_free_2d((void **)array, nwords);
 				return (NULL);
@@ -75,20 +77,3 @@ char			**ft_split(const char *s, const char c)
 	}
 	return (array);
 }
-
-#include <stdio.h>
-/*
-int main()
-{
-	char **split = ft_split(" 15,29,", ',');
-	
-	if (split)
-	{
-		printf("%s\n", split[0]);
-		printf("%s\n", split[1]);
-		printf("%s\n", split[2]);
-		printf("strlen %d\n", ft_strlen_2d(split));
-	}
-	return 0;
-}
-*/

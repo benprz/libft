@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/09 17:46:34 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/09 17:56:06 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:26:22 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 char	*ft_tolower_string(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (str)

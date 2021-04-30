@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/06 13:12:43 by bperez            #+#    #+#             */
-/*   Updated: 2020/03/06 13:44:14 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 17:07:46 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_memset_uint32(void *ptr, const uint32_t value, size_t len_32)
 {
-	__uint128_t *ptr_128;
+	__uint128_t	*ptr_128;
 	size_t		len_128;
 
 	ptr_128 = (__uint128_t *)ptr;

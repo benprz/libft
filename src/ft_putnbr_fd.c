@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 16:03:09 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 16:58:08 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:10:36 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,9 @@ void	ft_putnbr_fd(const int n, const int fd)
 {
 	unsigned int	n2;
 
-	n2 = n < 0 ? (unsigned int)-n : (unsigned int)n;
+	n2 = (unsigned int)n;
+	if (n < 0)
+		n2 = -(unsigned int)n;
 	if (n < 0)
 		ft_putchar_fd('-', fd);
 	if (n2)

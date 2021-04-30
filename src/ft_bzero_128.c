@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 15:02:10 by bperez            #+#    #+#             */
-/*   Updated: 2021/01/27 15:10:23 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 16:56:29 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero_128(void *ptr, const size_t len)
 {
-	__uint128_t *ptr_128;
+	__uint128_t	*ptr_128;
 	size_t		len_128;
 
 	ptr_128 = (__uint128_t *)ptr;
@@ -24,6 +24,5 @@ void	ft_bzero_128(void *ptr, const size_t len)
 	if (len_128)
 	{
 		len_128 /= 0.0625;
-
 	}
 }

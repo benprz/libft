@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/24 13:31:37 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/24 13:44:41 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:14:45 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,8 @@ char	*ft_strcdup(const char *s1, const int c)
 	if (s1)
 	{
 		len = ft_strclen(s1, c);
-		if ((s2 = (char *)malloc(sizeof(char) * (len + 1))))
+		s2 = (char *)malloc(sizeof(char) * (len + 1));
+		if (s2)
 		{
 			s2[len] = '\0';
 			while (len--)

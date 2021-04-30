@@ -6,14 +6,14 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 18:48:16 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 18:11:23 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:24:16 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		check_set(const char *set, const char c)
+static int	check_set(const char *set, const char c)
 {
 	while (*set)
 	{
@@ -23,7 +23,7 @@ static int		check_set(const char *set, const char c)
 	return (0);
 }
 
-char			*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	len;
 

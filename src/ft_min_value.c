@@ -6,12 +6,14 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/30 19:19:53 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/30 19:20:09 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:08:25 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int		ft_min_value(const int n, const int min)
+int	ft_min_value(const int n, const int min)
 {
-	return (n < min ? min : n);
+	if (n < min)
+		return (min);
+	return (n);
 }

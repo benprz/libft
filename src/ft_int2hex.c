@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/09 15:29:45 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/10 15:09:01 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:06:28 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,11 +15,14 @@
 
 short	count_chars(unsigned long n)
 {
-	int len;
+	int	len;
 
 	len = 1;
-	while ((n /= 16))
+	while (n / 16)
+	{
+		n /= 16;
 		len++;
+	}
 	return (len);
 }
 
@@ -29,7 +32,8 @@ char	*ft_int2hex(unsigned long n)
 	short	len;
 
 	len = count_chars(n);
-	if ((str = (char *)malloc(sizeof(char) * (len + 1))))
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str)
 	{
 		str[len] = '\0';
 		while (len--)

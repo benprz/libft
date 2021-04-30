@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/22 13:18:46 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/22 13:37:00 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:23:13 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 #include <stddef.h>
 
-int		ft_strnrcmp(const char *s1, const char *s2, size_t n)
+int	ft_strnrcmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	len1;
 	size_t	len2;

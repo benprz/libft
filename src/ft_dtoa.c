@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/06 18:36:36 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/09 11:18:56 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:05:12 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,15 +15,18 @@
 
 static short	count_chars(long long n)
 {
-	short len;
+	short	len;
 
 	len = 1;
-	while ((n /= 10))
+	while (n / 10)
+	{
+		n /= 10;
 		len++;
+	}
 	return (len);
 }
 
-char			*ft_dtoa(const long long n)
+char	*ft_dtoa(const long long n)
 {
 	char				*str;
 	unsigned long long	n2;
@@ -32,8 +35,11 @@ char			*ft_dtoa(const long long n)
 
 	len = count_chars(n);
 	neg = n < 0;
-	n2 = neg ? (unsigned long long)-n : (unsigned long long)n;
-	if ((str = (char *)malloc((len + neg + 1) * sizeof(char))))
+	n2 = (unsigned long long)n;
+	if (neg)
+		n2 = -(unsigned long long)n;
+	str = (char *)malloc((len + neg + 1) * sizeof(char));
+	if (str)
 	{
 		str[len + neg] = '\0';
 		while (len--)

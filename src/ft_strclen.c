@@ -6,7 +6,7 @@
 /*   By: bperez <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 17:15:46 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/23 19:16:49 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:15:20 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 size_t	ft_strclen(const char *str, const char c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (str)

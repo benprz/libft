@@ -6,11 +6,11 @@
 /*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 17:27:07 by bperez            #+#    #+#             */
-/*   Updated: 2021/01/30 15:28:48 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 17:11:55 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		check_regex(char c, char *regex)
+int	check_regex(char c, char *regex)
 {
 	while (*regex)
 	{
@@ -21,7 +21,7 @@ int		check_regex(char c, char *regex)
 	return (0);
 }
 
-int		ft_regex(char *str, char *regex)
+int	ft_regex(char *str, char *regex)
 {
 	if (str && regex)
 	{

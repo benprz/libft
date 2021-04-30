@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/24 17:02:33 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/24 17:15:38 by bperez      ###    #+. /#+    ###.fr     */
+/*   Updated: 2021/04/30 17:23:54 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 char	*ft_strschr(const char *s, const char *s2)
 {
-	int i;
+	int	i;
 
 	while (*s)
 	{

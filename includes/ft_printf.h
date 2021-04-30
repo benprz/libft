@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/19 19:17:56 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/04/13 14:52:30 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/04/30 16:49:30 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-enum				e_types
+enum e_types
 {
 	_char,
 	_digit,
@@ -33,7 +33,7 @@ enum				e_types
 	_nbtypes
 };
 
-enum				e_flags
+enum e_flags
 {
 	_minus,
 	_zero,
@@ -43,13 +43,13 @@ enum				e_flags
 	_nbflags
 };
 
-union				u_flags
+union u_flags
 {
 	uint64_t		value;
 	unsigned char	byte[_nbflags];
 };
 
-typedef struct		s_args
+typedef struct s_args
 {
 	union u_flags	flags;
 	int				width;
@@ -60,7 +60,7 @@ typedef struct		s_args
 }					t_args;
 
 extern const char	g_conversion_types[_nbtypes];
-extern char			*(*g_conversion_functions[_nbtypes])(va_list);
+extern	char		(*(*g_conversion_functions[_nbtypes])(va_list));
 extern const char	g_flags[_nbflags];
 
 int					ft_printf(const char *format, ...);
