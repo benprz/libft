@@ -6,12 +6,14 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/17 10:58:55 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/18 18:37:22 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 13:54:36 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-double		ft_abs(const double i)
+double	ft_abs(const double i)
 {
-	return (i < 0 ? -i : i);
+	if (i < 0)
+		return (-i);
+	return (i);
 }
