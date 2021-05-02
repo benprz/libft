@@ -13,9 +13,9 @@
 
 #include <stddef.h>
 
-int		ft_memcmp(const void *p1, const void *p2, const size_t len)
+int	ft_memcmp(const void *p1, const void *p2, const size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i != len)

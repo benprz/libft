@@ -18,9 +18,10 @@
 
 char	*convert_char(va_list ap)
 {
-	char *output;
+	char	*output;
 
-	if ((output = malloc(sizeof(char) * 2)))
+	output = malloc(sizeof(char) * 2);
+	if (output)
 	{
 		output[0] = (char)va_arg(ap, int);
 		output[1] = '\0';

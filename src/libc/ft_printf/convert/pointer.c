@@ -22,7 +22,8 @@ char	*convert_pointer(va_list ap)
 	char	*output;
 
 	output = NULL;
-	if ((hex = ft_int2hex(va_arg(ap, long))))
+	hex = ft_int2hex(va_arg(ap, long));
+	if (hex)
 	{
 		output = ft_strjoin("0x", hex);
 		free(hex);

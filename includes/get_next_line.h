@@ -26,6 +26,6 @@
 # define END_READ 0
 # define END_LINE 1
 
-int		get_next_line(int fd, char **line);
+int	get_next_line(int fd, char **line, char *remainder, long read_length);
 
 #endif

@@ -24,7 +24,8 @@ char	*ft_strdup(const char *s1)
 	if (s1)
 	{
 		len = ft_strlen(s1);
-		if ((s2 = (char *)malloc(sizeof(char) * (len + 1))))
+		s2 = (char *)malloc(sizeof(char) * (len + 1));
+		if (s2)
 		{
 			s2[len] = '\0';
 			while (len--)

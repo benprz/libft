@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-const char			g_conversion_types[_nbtypes] = {
+const char	g_conversion_types[_nbtypes] = {
 	'c',
 	'd',
 	'i',
@@ -29,7 +29,7 @@ const char			g_conversion_types[_nbtypes] = {
 	'%'
 };
 
-char				*(*g_conversion_functions[_nbtypes])(va_list) = {
+char		*(*g_conversion_functions[_nbtypes])(va_list) = {
 	convert_char,
 	convert_int,
 	convert_int,
@@ -41,7 +41,7 @@ char				*(*g_conversion_functions[_nbtypes])(va_list) = {
 	convert_percent
 };
 
-const char			g_flags[_nbflags] = {
+const char	g_flags[_nbflags] = {
 	'-',
 	'0',
 	'*',
@@ -49,26 +49,30 @@ const char			g_flags[_nbflags] = {
 	'*'
 };
 
-static int			check_type(const char c)
+static int	check_type(const char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < _nbtypes && g_conversion_types[i] != c)
 		i++;
-	return (i < _nbtypes ? i : ERROR);
+	if (i < _nbtypes)
+		return (i);
+	return (ERROR);
 }
 
-static int			parse_arg(const char **format, va_list ap, int len)
+static int	parse_arg(const char **format, va_list ap, int len)
 {
 	t_args	arg;
 
 	(*format)++;
 	if (init_flags(&(*format), &arg, ap) != ERROR)
 	{
-		if ((arg.type = check_type(**format)) != ERROR)
+		arg.type = check_type(**format);
+		if (arg.type != ERROR)
 		{
-			if ((arg.output = g_conversion_functions[arg.type](ap)))
+			arg.output = g_conversion_functions[arg.type](ap);
+			if (arg.output)
 			{
 				arg.output_len = ft_strlen(arg.output);
 				len += print_arg(&arg);
@@ -80,10 +84,10 @@ static int			parse_arg(const char **format, va_list ap, int len)
 	return (ERROR);
 }
 
-static int			parse_format(const char *format, va_list ap)
+static int	parse_format(const char *format, va_list ap)
 {
-	int len;
-	int tmp;
+	int	len;
+	int	tmp;
 
 	len = 0;
 	while (*format && len != ERROR)
@@ -102,9 +106,9 @@ static int			parse_format(const char *format, va_list ap)
 	return (len);
 }
 
-int					ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	va_list ap;
+	va_list	ap;
 	int		len;
 
 	va_start(ap, format);

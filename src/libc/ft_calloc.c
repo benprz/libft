@@ -21,9 +21,11 @@ void	*ft_calloc(const size_t count, const size_t size)
 	size_t	len;
 
 	ptr = NULL;
-	if ((len = size * count) > 0)
+	len = size * count;
+	if (len > 0)
 	{
-		if ((ptr = malloc(len)))
+		ptr = malloc(len);
+		if (ptr)
 			ft_bzero(ptr, len);
 	}
 	return (ptr);

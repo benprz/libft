@@ -19,29 +19,31 @@
 
 static char	*update_line(char *line, char *buffer)
 {
-	char *tmp;
+	char	*tmp;
 
-	if ((tmp = malloc(ft_strlen(line) + ft_strclen(buffer, DELIM) + 1)))
+	tmp = malloc(ft_strlen(line) + ft_strclen(buffer, DELIM) + 1);
+	if (tmp)
 		*(ft_strccpy(ft_strcpy(tmp, line), buffer, DELIM)) = '\0';
 	if (line)
 		free(line);
 	return (tmp);
 }
 
-int			get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line, char *remainder, long read_length)
 {
 	static char	buffer[BUFFER_SIZE + 1];
-	char		*remainder;
-	long		read_length;
 
 	*line = NULL;
 	while (1)
 	{
-		if (!(*line = update_line(*line, buffer)))
+		*line = update_line(*line, buffer);
+		if (!line)
 			break ;
-		if (!(remainder = ft_strchr(buffer, DELIM)))
+		remainder = ft_strchr(buffer, DELIM);
+		if (!remainder)
 		{
-			if ((read_length = read(fd, buffer, BUFFER_SIZE)) < 0)
+			read_length = read(fd, buffer, BUFFER_SIZE);
+			if (read_length < 0)
 				break ;
 			if (read_length == 0 && buffer[0] == '\0')
 				return (END_READ);

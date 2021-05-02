@@ -17,7 +17,7 @@
 
 static int	print_precision(t_args *arg)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if ((arg->type == _int || arg->type == _digit) && arg->output[0] == '-')
@@ -32,12 +32,15 @@ static int	print_precision(t_args *arg)
 
 static int	print_width(t_args *arg)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (arg->width)
 	{
-		len += write(1, arg->flags.byte[_zero] ? "0" : " ", 1);
+		if (arg->flags.byte[_zero])
+			len += write(1, "0", 1);
+		else
+			len += write(1, " ", 1);
 		arg->width--;
 	}
 	return (len);
@@ -45,7 +48,7 @@ static int	print_width(t_args *arg)
 
 static int	print_output(t_args *arg)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if ((arg->type == _int || arg->type == _digit) && arg->output[0] == '-')
@@ -57,7 +60,7 @@ static int	print_output(t_args *arg)
 	return (len);
 }
 
-void		handle_exceptions(t_args *arg)
+void	handle_exceptions(t_args *arg)
 {
 	if (arg->type == _string && arg->flags.byte[_precision])
 	{
@@ -73,7 +76,7 @@ void		handle_exceptions(t_args *arg)
 	if (arg->flags.byte[_precision] && !arg->size &&\
 			arg->output[0] == '0' && arg->type != _pointer)
 		arg->output_len = 0;
-	if (arg->type == _pointer && arg->flags.byte[_precision]\
+	if (arg->type == _pointer && arg->flags.byte[_precision] \
 			&& !arg->size && arg->output_len == 3)
 		arg->output_len = 2;
 	if (arg->type == _int || arg->type == _digit)
@@ -85,9 +88,9 @@ void		handle_exceptions(t_args *arg)
 	}
 }
 
-int			print_arg(t_args *arg)
+int	print_arg(t_args *arg)
 {
-	int		len;
+	int	len;
 
 	len = 0;
 	handle_exceptions(arg);

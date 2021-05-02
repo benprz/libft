@@ -26,9 +26,9 @@ void	get_precision_size(const char **format, t_args *arg)
 	}
 }
 
-int		is_flag(const char **format, t_args *arg)
+int	is_flag(const char **format, t_args *arg)
 {
-	int i;
+	int	i;
 
 	if (ft_isdigit(**format) && **format != g_flags[_zero])
 	{
@@ -49,7 +49,7 @@ int		is_flag(const char **format, t_args *arg)
 	return (0);
 }
 
-int		init_flags(const char **format, t_args *arg, va_list ap)
+int	init_flags(const char **format, t_args *arg, va_list ap)
 {
 	ft_bzero(arg, sizeof(t_args));
 	while (is_flag(format, arg))

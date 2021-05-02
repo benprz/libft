@@ -15,7 +15,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, const int c, const size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (dst && src)

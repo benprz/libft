@@ -22,9 +22,13 @@ int	ft_atoi(const char *str)
 	neg = 0;
 	while (ft_isspace(*str))
 		str++;
-	if ((neg = *str == '-' ? 1 : 0) || *str == '+')
+	if (*str == '-')
+		neg = 1;
+	if (neg || *str == '+')
 		str++;
 	while (ft_isdigit(*str))
 		val = val * 10 + (*str++ - '0');
-	return (neg ? -val : val);
+	if (neg)
+		return (-val);
+	return (val);
 }

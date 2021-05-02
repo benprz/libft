@@ -23,9 +23,11 @@ char	*ft_strndup(const char *s1, size_t len)
 	s2 = NULL;
 	if (s1 && len > 0)
 	{
-		if (len > (slen = ft_strlen(s1)))
+		slen = ft_strlen(s1);
+		if (len > slen)
 			len = slen;
-		if ((s2 = (char *)ft_calloc(len + 1, sizeof(char))))
+		s2 = (char *)ft_calloc(len + 1, sizeof(char));
+		if (s2)
 		{
 			while (len--)
 				s2[len] = s1[len];

@@ -17,9 +17,10 @@
 
 char	*convert_string(va_list ap)
 {
-	void *s;
+	void	*s;
 
-	if ((s = va_arg(ap, void *)) == NULL)
+	s = va_arg(ap, void *);
+	if (s == NULL)
 		return (ft_strdup("(null)"));
 	return (ft_strdup((char *)s));
 }
