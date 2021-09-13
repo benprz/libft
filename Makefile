@@ -6,7 +6,7 @@
 #    By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/22 14:48:59 by bperez            #+#    #+#              #
-#    Updated: 2021/02/02 15:47:52 by bperez           ###   ########lyon.fr    #
+#    Updated: 2021/09/09 19:11:31 by bperez           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ FT_PRINTF_SRC =	ft_printf.c\
 LIBC_DIR = libc/
 LIBC_SRC =	ft_abs.c\
 			ft_atoi.c\
+			ft_atol.c\
 			ft_bzero.c\
 			ft_calloc.c\
 			ft_isalnum.c\
@@ -71,10 +72,12 @@ LIBC_SRC =	ft_abs.c\
 			ft_toupper.c\
 			$(addprefix $(FT_PRINTF_DIR),$(FT_PRINTF_SRC))
 
-SRC =	ft_dtoa.c\
+SRC =	ft_atoul.c\
+		ft_dtoa.c\
 		ft_free_2d.c\
 		ft_itoa.c\
 		ft_int2hex.c\
+		ft_is_number.c\
 		ft_max_value.c\
 		ft_memset_uint32.c\
 		ft_min_value.c\

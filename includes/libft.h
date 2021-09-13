@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/02/02 15:43:32 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/09/09 19:11:14 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,7 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 
+# include <limits.h>
 # include <stddef.h>
 
 # define REGEX_DIGITS "0123456789"
@@ -32,6 +33,7 @@ int		ft_isascii(const int c);
 int		ft_isdigit(const int c);
 int		ft_isprint(const int c);
 int		ft_isspace(const int c);
+int		ft_is_number(char *digits);
 int		ft_max_value(const int n, const int max);
 void	*ft_memccpy(void *dst, const void *src, const int c, const size_t len);
 void	*ft_memchr(const void *ptr, const int c, const size_t len);
@@ -85,6 +87,8 @@ void	ft_putendl_fd(const char *s, const int fd);
 void	ft_putnbr_fd(const int n, const int fd);
 
 int		ft_atoi(const char *str);
+int		ft_atol(const char *str);
+unsigned long	ft_atoul(char *digits);
 char	*ft_itoa(const int n);
 char	*ft_dtoa(const long long n);
 char	*ft_udtoa(unsigned long long n);

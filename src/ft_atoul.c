@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_atoul.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
+/*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 15:12:18 by bperez            #+#    #+#             */
-/*   Updated: 2021/08/31 14:34:32 by bperez           ###   ########lyon.fr   */
+/*   Created: 2021/09/09 16:11:51 by bperez            #+#    #+#             */
+/*   Updated: 2021/09/09 16:15:59 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+unsigned long	ft_atoul(char *digits)
 {
-	ft_memset(s, 0, n);
+	unsigned long val;
+
+	val = 0;
+	while (ft_isspace(*digits))
+		digits++;
+	while (ft_isdigit(*digits))
+		val = val * 10 + (*digits++ - '0');
+	return (val);
 }
