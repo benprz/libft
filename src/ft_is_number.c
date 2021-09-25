@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 16:29:50 by bperez            #+#    #+#             */
-/*   Updated: 2021/09/09 19:10:51 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/09/25 16:59:40 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_is_number(char *digits)
 {
-	int	i;
+	int		i;
 	long	number;
-	int	neg;
+	int		neg;
 
 	i = 0;
 	neg = 0;

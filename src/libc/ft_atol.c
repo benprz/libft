@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 19:02:24 by bperez            #+#    #+#             */
-/*   Updated: 2021/09/09 19:11:32 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/09/25 17:00:31 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atol(const char *str)
 {
 	long	val;
-	int	neg;
+	int		neg;
 
 	val = 0;
 	neg = 0;
