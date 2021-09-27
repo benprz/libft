@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/09/27 15:12:32 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/09/27 15:20:04 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,7 @@
 
 # include <limits.h>
 # include <stddef.h>
+# include <stdint.h>
 
 # define REGEX_DIGITS "0123456789"
 
