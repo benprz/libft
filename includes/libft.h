@@ -6,7 +6,7 @@
 /*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/09/27 15:20:04 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:02:28 by bperez           ###   ########lyon.fr   */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -88,7 +88,7 @@ void			ft_putendl_fd(const char *s, const int fd);
 void			ft_putnbr_fd(const int n, const int fd);
 
 int				ft_atoi(const char *str);
-int				ft_atol(const char *str);
+long			ft_atol(const char *str);
 unsigned long	ft_atoul(char *digits);
 char			*ft_itoa(const int n);
 char			*ft_dtoa(const long long n);

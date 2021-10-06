@@ -6,13 +6,13 @@
 /*   By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 19:02:24 by bperez            #+#    #+#             */
-/*   Updated: 2021/09/25 17:00:31 by bperez           ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:02:28 by bperez           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	long	val;
 	int		neg;
