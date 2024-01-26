@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bperez <bperez@student.le-101.fr>          +#+  +:+       +#+         #
+#    By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/22 14:48:59 by bperez            #+#    #+#              #
-#    Updated: 2021/09/09 19:11:31 by bperez           ###   ########lyon.fr    #
+#    Updated: 2023/10/30 04:01:59 by bperez           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,12 @@ DEBUG_NAME = debug
 DEBUG_ARGS = main.c
 DEBUG_FLAGS = -Wall -Wextra -Wpedantic
 
-INC = ft_printf.h\
-	  get_next_line.h\
-	  libft.h\
+# INC = ft_printf.h\
+# 	  get_next_line.h\
+# 	  libft.h
+
+INC =	get_next_line.h\
+		libft.h
 
 FT_PRINTF_DIR = ft_printf/
 FT_PRINTF_SRC =	ft_printf.c\
@@ -68,9 +71,10 @@ LIBC_SRC =	ft_abs.c\
 			ft_strndup.c\
 			ft_strnstr.c\
 			ft_strrchr.c\
+			ft_strtol.c\
 			ft_tolower.c\
 			ft_toupper.c\
-			$(addprefix $(FT_PRINTF_DIR),$(FT_PRINTF_SRC))
+			# $(addprefix $(FT_PRINTF_DIR),$(FT_PRINTF_SRC))
 
 SRC =	ft_atoul.c\
 		ft_dtoa.c\

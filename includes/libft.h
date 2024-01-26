@@ -1,20 +1,20 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: bperez <bperez@student.le-101.fr>          +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/07 13:31:41 by bperez       #+#   ##    ##    #+#       */
-/*   Updated: 2021/10/06 15:02:28 by bperez           ###   ########lyon.fr   */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bperez <bperez@student.42lyon.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/07 13:31:41 by bperez            #+#    #+#             */
+/*   Updated: 2023/11/21 07:23:12 by bperez           ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "ft_printf.h"
+// # include "ft_printf.h"
 # include "get_next_line.h"
 
 # include <limits.h>
@@ -90,10 +90,11 @@ void			ft_putnbr_fd(const int n, const int fd);
 int				ft_atoi(const char *str);
 long			ft_atol(const char *str);
 unsigned long	ft_atoul(char *digits);
-char			*ft_itoa(const int n);
-char			*ft_dtoa(const long long n);
-char			*ft_udtoa(unsigned long long n);
-char			*ft_int2hex(unsigned long n);
+char	*ft_itoa(const int n);
+char	*ft_dtoa(const long long n);
+char	*ft_udtoa(unsigned long long n);
+char	*ft_int2hex(unsigned long n);
+long	ft_strtol(const char *str, char **endptr, int base);
 
 void			ft_skip_digit(const char **format);
 char			*ft_tolower_string(char *str);
