@@ -74,6 +74,8 @@ LIBC_SRC =	ft_abs.c\
 			ft_strtol.c\
 			ft_tolower.c\
 			ft_toupper.c\
+			ft_ether_aton.c\
+			ft_ether_ntoa.c
 			# $(addprefix $(FT_PRINTF_DIR),$(FT_PRINTF_SRC))
 
 SRC =	ft_atoul.c\

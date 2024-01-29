@@ -17,6 +17,8 @@
 // # include "ft_printf.h"
 # include "get_next_line.h"
 
+# define _GNU_SOURCE
+# include <netinet/ether.h>
 # include <limits.h>
 # include <stddef.h>
 # include <stdint.h>
@@ -98,5 +100,9 @@ long	ft_strtol(const char *str, char **endptr, int base);
 
 void			ft_skip_digit(const char **format);
 char			*ft_tolower_string(char *str);
+
+
+int             ft_ether_aton(const char *str, struct ether_addr *haddr);
+char*           ft_ether_ntoa(const struct ether_addr *addr);
 
 #endif
