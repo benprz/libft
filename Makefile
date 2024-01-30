@@ -20,7 +20,7 @@ OBJ_DIR = .obj/
 DEBUG_DIR = 
 DEBUG_NAME = debug
 DEBUG_ARGS = main.c
-DEBUG_FLAGS = -Wall -Wextra -Wpedantic
+DEBUG_FLAGS = -Wall -Wextra -Wpedantic -g
 
 # INC = ft_printf.h\
 # 	  get_next_line.h\
