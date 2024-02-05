@@ -11,18 +11,18 @@ long ft_strtol(const char *str, char **endptr, int base)
 		str++;
 	if (*str == '-' || *str == '+')
 		sign = (*str++ == '-') ? -1 : 1;
-	while (ft_isdigit(*str) || ft_isalpha(*str))
+	while (*str)
 	{
 		if (ft_isdigit(*str))
 		{
 			if (*str - '0' >= base)
-				break; // Unsupported value for the given base
+				return 0; // Unsupported value for the given base
 			nbr = nbr * base + (*str++ - '0');
 		}
 		else
 		{
-			if (ft_toupper(*str) - 'A' + 10 >= base)
-				break; // Unsupported value for the given base
+			if (!ft_isalpha(*str) || ft_toupper(*str) - 'A' + 10 >= base)
+				return 0; // Unsupported value for the given base
 			nbr = nbr * base + (ft_toupper(*str++) - 'A' + 10);
 		}
 	}
